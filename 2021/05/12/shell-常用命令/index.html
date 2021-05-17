@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>shell 常用命令 | 凉凉的超人</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="#文件比较符-e 判断对象是否存在-d 判断对象是否存在，并且为目录-f 判断对象是否存在，并且为常规文件-L 判断对象是否存在，并且为符号链接-h 判断对象是否存在，并且为软链接-s 判断对象是否存在，并且长度不为0-r 判断对象是否存在，并且可读-w 判断对象是否存在，并且可写-x 判断对象是否存在，并且可执行-O 判断对象是否存在，并且属于当前用户-G 判断对象是否存在，并且属于当前用户组-">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell 常用命令">
+<meta property="og:url" content="http://chenruosong.com/2021/05/12/shell-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+<meta property="og:site_name" content="凉凉的超人">
+<meta property="og:description" content="#文件比较符-e 判断对象是否存在-d 判断对象是否存在，并且为目录-f 判断对象是否存在，并且为常规文件-L 判断对象是否存在，并且为符号链接-h 判断对象是否存在，并且为软链接-s 判断对象是否存在，并且长度不为0-r 判断对象是否存在，并且可读-w 判断对象是否存在，并且可写-x 判断对象是否存在，并且可执行-O 判断对象是否存在，并且属于当前用户-G 判断对象是否存在，并且属于当前用户组-">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-12T07:05:32.000Z">
+<meta property="article:modified_time" content="2021-05-14T07:41:20.359Z">
+<meta property="article:author" content="Chen">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="凉凉的超人" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">凉凉的超人</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://chenruosong.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-shell-常用命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/05/12/shell-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2021-05-12T07:05:32.000Z" itemprop="datePublished">2021-05-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      shell 常用命令
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>#文件比较符<br>-e 判断对象是否存在<br>-d 判断对象是否存在，并且为目录<br>-f 判断对象是否存在，并且为常规文件<br>-L 判断对象是否存在，并且为符号链接<br>-h 判断对象是否存在，并且为软链接<br>-s 判断对象是否存在，并且长度不为0<br>-r 判断对象是否存在，并且可读<br>-w 判断对象是否存在，并且可写<br>-x 判断对象是否存在，并且可执行<br>-O 判断对象是否存在，并且属于当前用户<br>-G 判断对象是否存在，并且属于当前用户组<br>-nt 判断file1是否比file2新  [ “/data/file1” -nt “/data/file2” ]<br>-ot 判断file1是否比file2旧  [ “/data/file1” -ot “/data/file2” ]</p>
+<h2 id="查看内存映射"><a href="#查看内存映射" class="headerlink" title="查看内存映射"></a>查看内存映射</h2><p>cat /proc/PID/maps 或 cat /proc/PID/smaps</p>
+<h2 id="查看系统调用"><a href="#查看系统调用" class="headerlink" title="查看系统调用"></a>查看系统调用</h2><p>strace</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://chenruosong.com/2021/05/12/shell-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" data-id="ckosed1ez0001e4bf9xxphbjb" data-title="shell 常用命令" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/05/14/Kafka-ZooKeeper/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Kafka/ZooKeeper
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/05/10/ELK-Zabbix-%E9%83%A8%E7%BD%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">ELK + kafka +Zabbix 部署</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">五月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">四月 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/05/14/Kafka-ZooKeeper/">Kafka/ZooKeeper</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/12/shell-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">shell 常用命令</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/10/ELK-Zabbix-%E9%83%A8%E7%BD%B2/">ELK + kafka +Zabbix 部署</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/28/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9B%91%E6%8E%A7%E6%96%B9%E6%A1%88%E8%B0%83%E7%A0%94/">服务端监控方案调研</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/26/%E4%B8%80%E6%AC%A1%E7%BA%BF%E4%B8%8AMysql-has-gone-away%E6%8E%92%E6%9F%A5%E8%AE%B0%E5%BD%95/">Pdo长连接导致Mysql has gone away排查记录</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 Chen<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
